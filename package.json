@@ -1,0 +1,30 @@
+{
+    "name": "shoppingapp",
+    "version": "1.0.0",
+    "description": "CRUD skill test with a shopping app",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "cross-env NODE_ENV=development nodemon index.js",
+        "start": "cross-env NODE_ENV=development nodemon index.js"
+    },
+    "keywords": [
+        "CRUD",
+        "EXPRESS"
+    ],
+    "author": "Oluwamayowa Fadairo",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "cross-env": "^6.0.3",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "mongoose": "^5.8.10",
+        "nodemon": "^2.0.2"
+    },
+    "devDependencies": {
+        "eslint": "^6.8.0",
+        "eslint-config-airbnb-base": "^14.0.0",
+        "eslint-plugin-import": "^2.20.0"
+    }
+}
