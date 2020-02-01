@@ -1,11 +1,12 @@
 /* eslint-disable object-curly-newline */
+require('dotenv').config();
 const express = require('express');
 
 const router = express.Router();
 const mongoose = require('mongoose');
 const Order = require('./model/order');
 
-const connUri = 'mongodb://mayowa_dbuser:mayowadBuser@cluster0-shard-00-00-7pndu.mongodb.net:27017,cluster0-shard-00-01-7pndu.mongodb.net:27017,cluster0-shard-00-02-7pndu.mongodb.net:27017/shoppingApp?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority';
+const connUri = process.env.DB_CONN_LOCAL;
 // Create an order
 router.post('/create-order', async (req, res) => {
   mongoose.connect(connUri, { useUnifiedTopology: true, useNewUrlParser: true }, (err) => {
